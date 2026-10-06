@@ -1,48 +1,128 @@
-# Portfolio Website
+<div align="center">
 
-## How to run
-1. Unzip this folder and open it in VS Code.
-2. Open a terminal in the project root and run:
-   ```
-   npm install
-   npm run dev
-   ```
-3. Open the localhost link Vite prints (usually http://localhost:5173).
+# Muhammad Sarmad Sajjad — Portfolio
+
+A fast, animated, fully responsive developer portfolio showcasing AI/ML research, full-stack projects, and experience.
+
+[**Live Site**](#) · [**LinkedIn**](https://www.linkedin.com/in/malik-sarmad01) · [**GitHub**](https://github.com/Maliksarmad01)
+
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-11-0055FF?logo=framer&logoColor=white)
+![Deployed on Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?logo=vercel&logoColor=white)
+
+</div>
+
+---
+
+## Overview
+
+This is my personal portfolio website. It presents my background in **AI/ML and web development**: research projects, internships, certifications, skills, and a way to contact me. It is a single-page React app with no backend.
 
 ## Features
-- ✨ Animations powered by Framer Motion (page-load sequence in the hero,
-  scroll-triggered reveals on every section, hover micro-interactions on
-  cards and buttons)
-- 🌙 Dark/Light mode toggle (top-right of the navbar), persisted in
-  localStorage and defaults to the visitor's system preference
-- 📱 Fully responsive, including a mobile hamburger menu
-- 🎨 Custom design system: Space Grotesk (display), Inter (body), and
-  JetBrains Mono (labels/tags) with light + dark color tokens defined as
-  CSS variables in `src/App.css`
-- 💻 Professional project cards with tech-stack tags and GitHub/details links
-- 📈 Animated skill progress bars, grouped by Web Development, Machine
-  Learning, and Tools & Languages
-- 📄 Embedded resume viewer plus a dedicated download button
-- 🔗 GitHub & LinkedIn buttons in the hero, contact section, and footer
-- 📬 Contact form (name/email/message) with client-side validation and a
-  confirmation message
 
-## Content sourced from your CV
-Hero, About, Skills, and Projects reflect `M-Sarmad-Sajjad-Cv.pdf`. Your
-actual resume is included at `public/resume.pdf`, so the download button and
-embedded viewer both work immediately.
+- **Animated experience:** preloader, hero sequence, scroll-triggered reveals, scroll progress bar, and cursor glow, all built with Framer Motion
+- **Interactive 3D elements:** tilt cards, a spinning cube, and magnetic buttons
+- **Dark / light theme:** follows the system preference and remembers your choice
+- **Responsive design:** works from phones to widescreen, with a mobile hamburger menu
+- **Projects showcase:** cards with tech-stack tags
+- **Skills:** animated progress bars grouped by Web Development, Machine Learning, and Tools
+- **Experience & certifications:** timeline of roles, internships, awards, and publications
+- **Resume viewer:** embedded PDF preview plus one-click download
+- **Contact form:** client-side validation, delivered to my inbox through Formspree
 
-## Still to do
-- **GitHub & LinkedIn URLs**: currently placeholders
-  (`github.com/your-username`, `linkedin.com/in/your-profile`) in
-  `Hero.jsx`, `Contact.jsx`, and `Footer.jsx` — replace with your real
-  profile links.
-- **Project links**: each project card currently links to your GitHub
-  profile as a placeholder — point them to the actual repos once available.
-- **Contact form backend**: the form validates and shows a confirmation
-  message, but nothing is sent anywhere yet — no backend was requested. Wire
-  it up to a service like Formspree, EmailJS, or your own API endpoint if
-  you want to actually receive messages.
-- **Skill percentages**: the numbers in `Skills.jsx` are reasonable
-  estimates based on your CV — adjust them to reflect your own judgment of
-  your proficiency.
+## Tech Stack
+
+| Area | Tools |
+|---|---|
+| Framework | React 18 |
+| Build tool | Vite 5 |
+| Animation | Framer Motion |
+| Icons | react-icons |
+| PDF viewer | react-pdf |
+| Contact form | Formspree |
+| Hosting | Vercel |
+
+## Project Structure
+
+```
+portfolio/
+├── public/                 # Static files (favicon, CV PDF)
+├── src/
+│   ├── components/         # Hero, About, Skills, Projects, Experience,
+│   │                       # Certifications, Resume, Contact, Footer, ...
+│   ├── context/            # ThemeContext (dark/light mode)
+│   ├── App.jsx             # Page layout
+│   ├── App.css             # Design tokens and global styles
+│   └── main.jsx            # Entry point
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+## Getting Started
+
+**Prerequisites:** [Node.js](https://nodejs.org) 18 or newer.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Maliksarmad01/Portfolio.git
+cd Portfolio
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the dev server
+npm run dev
+```
+
+Open the local URL Vite prints (usually `http://localhost:5173`).
+
+### Available scripts
+
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start the development server with hot reload |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+
+## Customizing
+
+| To change... | Edit |
+|---|---|
+| Projects | `src/components/Projects.jsx` |
+| Skills and levels | `src/components/Skills.jsx` |
+| Work experience | `src/components/Experience.jsx` |
+| Certifications and awards | `src/components/Certifications.jsx` |
+| Social and contact links | `Hero.jsx`, `Contact.jsx`, `Footer.jsx` |
+| Colors and fonts | CSS variables at the top of `src/App.css` |
+| Resume | Replace `public/M-Sarmad-Sajjad-CV.pdf` and update the filename in `Resume.jsx` and `Hero.jsx` |
+
+### Contact form setup
+
+1. Create a free form at [formspree.io](https://formspree.io).
+2. Copy your form URL (`https://formspree.io/f/xxxxxxxx`).
+3. Paste it into `FORMSPREE_ENDPOINT` in `src/components/Contact.jsx`.
+
+## Deployment
+
+The site is deployed on **Vercel**:
+
+1. Push the repository to GitHub.
+2. Import it at [vercel.com/new](https://vercel.com/new).
+3. Keep the detected settings: **Framework** Vite, **Build** `npm run build`, **Output** `dist`.
+4. Click **Deploy**. Every push to `main` redeploys automatically.
+
+> **Deploying to GitHub Pages instead?** Set `base: "/Portfolio/"` in `vite.config.js` and publish the `dist` folder (for example with the `gh-pages` package).
+
+## Contact
+
+- **Email:** maliksarmadsajjad8@gmail.com
+- **LinkedIn:** [linkedin.com/in/malik-sarmad01](https://www.linkedin.com/in/malik-sarmad01)
+- **GitHub:** [@Maliksarmad01](https://github.com/Maliksarmad01)
+
+---
+
+<div align="center">
+Built with React and Framer Motion by Muhammad Sarmad Sajjad
+</div>
