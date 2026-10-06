@@ -28,7 +28,7 @@
   confirmation message
 
 ## Content sourced from your CV
-Hero, About, Skills, and Projects reflect `Muhammad_Abubakar_Cv.pdf`. Your
+Hero, About, Skills, and Projects reflect `M-Sarmad-Sajjad-Cv.pdf`. Your
 actual resume is included at `public/resume.pdf`, so the download button and
 embedded viewer both work immediately.
 
