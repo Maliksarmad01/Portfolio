@@ -21,7 +21,7 @@ const experience = [
   {
     role: "Freelance Web Developer",
     company: "Self-Employed",
-    period: "Jun 2024 – Sep 2025",
+    period: "Jan 2024 – Present",
     location: "Remote",
     points: [
       "Designed, developed, and maintained responsive websites and web applications for independent clients.",
